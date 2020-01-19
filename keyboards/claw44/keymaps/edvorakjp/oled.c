@@ -20,13 +20,13 @@ const char *read_layer_state(void) {
   char layer_name[17];
 
   switch (biton32(layer_state)) {
-    case L_BASE:
+    case _EDVORAK_BASE:
       strcpy(layer_name, "Default");
       break;
-    case _RAISE:
+    case _EDVORAK_RAISE:
       strcpy(layer_name, "Raise");
       break;
-    case _LOWER:
+    case _EDVORAK_LOWER:
       strcpy(layer_name, "Lower");
       break;
     default:

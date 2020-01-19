@@ -19,15 +19,15 @@
 #define KC_TMB1 KC_ESC
 #define KC_TMB2 KC_LA(TAB)
 #define KC_TMB3 KC_LS(SPC)
-#define KC_TMB4 TD(TD_LOWER) // act as LOWER when hold, as KC_LANG2(=English) when tapped
-#define KC_TMB5 TD(TD_RAISE) // act as RAISE when hold, as KC_LANG1(=Japanese) when tapped
+#define KC_TMB4 TD(TD_EDVORAK_LOWER) // act as LOWER when hold, as KC_LANG2(=English) when tapped
+#define KC_TMB5 TD(TD_EDVORAK_RAISE) // act as RAISE when hold, as KC_LANG1(=Japanese) when tapped
 #define KC_TMB6 KC_RC(BSPC)
 #define KC_TMB7 KC_RG(ENT)
 #define KC_TMB8 KC_RC(DEL)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-  [_EDVORAK] = LAYOUT_kc(
+  [_EDVORAK_BASE] = LAYOUT_kc(
   //|----+----+-----+-----+-----+----|   |----+-----+-----+-----+----+----|
      GRV ,QUOT,COMM , DOT ,  Y  , Q  ,     F  ,  G  ,  R  ,  W  , P  ,BSLS,
   //|----+----+-----+-----+-----+----|   |----+-----+-----+-----+----+----|
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //          `-----+-----+-----+----'   `----+-----+-----+-----'
   ),
 
-  [_LOWER] = LAYOUT_kc(
+  [_EDVORAK_LOWER] = LAYOUT_kc(
   //|----+----+------+------+------+----|   |----+------+------+-------+----+----|
          ,    , LCBR , LBRC , LPRN ,    ,        , RPRN , RBRC , RCBR  ,    ,    ,
   //|----+----+------+------+------+----|   |----+------+------+-------+----+----|
@@ -47,11 +47,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+------+------+------+----|   |----+------+------+-------+----+----|
      PSCR,    , HOME , PGDN , PGUP ,END ,    LEFT, DOWN ,  UP  , RGHT  ,    ,    ,
   //`----+----+------+------+------+----|   |----+------+------+-------+----+----'
-                     ,      ,      ,    ,        ,      ,      ,
+                     ,      ,      , NO ,    MAC ,      ,      ,
   //          `------+------+------+----'   `----+------+------+-------'
   ),
 
-  [_RAISE] = LAYOUT_kc(
+  [_EDVORAK_RAISE] = LAYOUT_kc(
   //|----+----+-----+-----+-----+----|   |----+-----+-----+-----+----+----|
          ,    ,EXLM , AT  ,HASH ,DLR ,    PERC,CIRC ,AMPR ,ASTR ,    ,    ,
   //|----+----+-----+-----+-----+----|   |----+-----+-----+-----+----+----|
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+-----+-----+-----+----|   |----+-----+-----+-----+----+----|
      PSCR,    ,HOME ,PGDN ,PGUP ,END ,    LEFT,DOWN , UP  ,RGHT ,    ,    ,
   //`----+----+-----+-----+-----+----|   |----+-----+-----+-----+----+----'
-                    ,     ,     ,    ,        ,     ,     ,
+                    ,     ,     ,WIN ,     NO ,     ,     ,
   //          `-----+-----+-----+----'   `----+-----+-----+-----'
   )
 };
