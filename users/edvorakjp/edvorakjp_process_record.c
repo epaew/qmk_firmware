@@ -45,12 +45,12 @@ bool process_record_edvorakjp_config(uint16_t keycode, keyrecord_t *record) {
 bool process_record_layer(uint16_t keycode, keyrecord_t *record) {
 #if TAP_DANCE_ENABLE != yes
   switch (keycode) {
-    case LOWER:
+    case EDVORAK_LOWER:
       if (record->event.pressed) {
-        layer_on(_LOWER);
+        layer_on(_EDVORAK_LOWER);
         time_on_pressed = record->event.time;
       } else {
-        layer_off(_LOWER);
+        layer_off(_EDVORAK_LOWER);
 
         if (TIMER_DIFF_16(record->event.time, time_on_pressed) < TAPPING_TERM) {
           set_japanese_mode(false);
@@ -58,12 +58,12 @@ bool process_record_layer(uint16_t keycode, keyrecord_t *record) {
         time_on_pressed = 0;
       }
       return false;
-    case RAISE:
+    case EDVORAK_RAISE:
       if (record->event.pressed) {
-        layer_on(_RAISE);
+        layer_on(_EDVORAK_RAISE);
         time_on_pressed = record->event.time;
       } else {
-        layer_off(_RAISE);
+        layer_off(_EDVORAK_RAISE);
 
         if (TIMER_DIFF_16(record->event.time, time_on_pressed) < TAPPING_TERM) {
           set_japanese_mode(true);

@@ -9,17 +9,16 @@
 extern keymap_config_t keymap_config;
 
 enum edvorakjp_layers {
-  _EDVORAK = 0,
-  _LOWER,
-  _RAISE,
-  _ADJUST,
-  _EXTRA,
+  _EDVORAK_BASE = 0,
+  _EDVORAK_LOWER,
+  _EDVORAK_RAISE,
+  _EDVORAK_ADJUST,
+  _EDVORAK_EXTRA,
 };
 
 enum edvorakjp_keycodes {
-  EDVORAK = SAFE_RANGE,
-  LOWER,
-  RAISE,
+  EDVORAK_LOWER = SAFE_RANGE,
+  EDVORAK_RAISE,
   KC_MAC,
   KC_WIN,
   KC_JPN,
@@ -37,8 +36,8 @@ enum edvorakjp_keycodes {
 #define KC_RA(k) RALT_T(KC_##k)
 
 enum tap_dance_code {
-  TD_LOWER = 0,
-  TD_RAISE
+  TD_EDVORAK_LOWER = 0,
+  TD_EDVORAK_RAISE
 };
 
 // base
