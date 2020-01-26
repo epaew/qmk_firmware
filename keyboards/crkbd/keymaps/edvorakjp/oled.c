@@ -3,7 +3,10 @@
 
 // NOTE: Redefined to avoid to use snprintf(); It makes size of firmware big.
 const char *read_mode_icon(bool windows_mode) {
-  static const char logo[][2][3] = {{{0x95, 0x96, 0}, {0xb5, 0xb6, 0}}, {{0x97, 0x98, 0}, {0xb7, 0xb8, 0}}};
+  static const char logo[][2][3] = {
+    {{0x95, 0x96, 0}, {0xb5, 0xb6, 0}},
+    {{0x97, 0x98, 0}, {0xb7, 0xb8, 0}}
+  };
   static char mode_icon[10];
 
   int mode_number = windows_mode ? 1 : 0;

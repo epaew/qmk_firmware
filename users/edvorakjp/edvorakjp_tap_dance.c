@@ -35,14 +35,14 @@ void td_lower_finished(qk_tap_dance_state_t *state, void *user_data) {
     case HOLD:
       break;
   }
-  layer_on(_LOWER);
+  layer_on(EDVORAK_LAYER_LOWER);
 }
 
 void td_lower_reset(qk_tap_dance_state_t *state, void *user_data) {
   if (td_status.lower == DOUBLE_TAP) {
     unregister_code(KC_ESC);
   }
-  layer_off(_LOWER);
+  layer_off(EDVORAK_LAYER_LOWER);
   td_status.lower = NONE;
 }
 
@@ -57,11 +57,11 @@ void td_raise_finished(qk_tap_dance_state_t *state, void *user_data) {
     case HOLD:
       break;
   }
-  layer_on(_RAISE);
+  layer_on(EDVORAK_LAYER_RAISE);
 }
 
 void td_raise_reset(qk_tap_dance_state_t *state, void *user_data) {
-  layer_off(_RAISE);
+  layer_off(EDVORAK_LAYER_RAISE);
   td_status.raise = NONE;
 }
 
